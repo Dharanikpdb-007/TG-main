@@ -1,0 +1,11 @@
+# Logic
+node_modules/
+dist/
+dist-ssr/
+*.local
+.env
+.DS_Store
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

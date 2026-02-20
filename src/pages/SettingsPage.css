@@ -1,0 +1,449 @@
+/* SettingsPage.css */
+
+.settings-page {
+    padding: 0 16px 100px;
+    min-height: 100vh;
+}
+
+/* Header */
+.s-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 0 24px;
+}
+
+.s-back-btn {
+    background: none;
+    border: none;
+    color: var(--s-text);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+}
+
+.s-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--s-text);
+}
+
+/* Section */
+.s-section {
+    margin-bottom: 24px;
+}
+
+.s-section-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #00e676;
+    margin: 0 0 10px;
+}
+
+/* Card */
+.s-card {
+    background: var(--s-card-bg);
+    border: 1px solid var(--s-border);
+    border-radius: 14px;
+    padding: 18px;
+}
+
+/* Label */
+.s-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--s-text-muted);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+/* Select */
+.s-select {
+    width: 100%;
+    padding: 12px 14px;
+    background: var(--s-input-bg);
+    border: 1px solid var(--s-border);
+    border-radius: 10px;
+    color: var(--s-text);
+    font-size: 0.95rem;
+    outline: none;
+    cursor: pointer;
+    appearance: auto;
+}
+
+.s-select option {
+    background: var(--s-card-bg);
+    color: var(--s-text);
+}
+
+/* Row Between */
+.s-row-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.s-row-label {
+    display: block;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--s-text);
+}
+
+.s-row-desc {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--s-text-muted);
+    margin-top: 2px;
+}
+
+/* Toggle Switch */
+.s-toggle {
+    width: 48px;
+    height: 26px;
+    border-radius: 26px;
+    background: #4b5563;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex-shrink: 0;
+}
+
+.s-toggle[data-on="true"] {
+    background: #00e676;
+}
+
+.s-toggle-knob {
+    width: 22px;
+    height: 22px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.2s;
+}
+
+.s-toggle[data-on="true"] .s-toggle-knob {
+    left: 24px;
+}
+
+/* Sub Section */
+.s-sub-section {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--s-border);
+}
+
+.s-sub-label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--s-text-muted);
+    margin-bottom: 10px;
+}
+
+/* Checkbox */
+.s-checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    cursor: pointer;
+    color: var(--s-text);
+    font-size: 0.9rem;
+}
+
+.s-checkbox {
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    border: 2px solid #4b5563;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: white;
+    transition: all 0.15s;
+    flex-shrink: 0;
+}
+
+.s-checkbox.checked {
+    background: #00e676;
+    border-color: #00e676;
+}
+
+/* Radio */
+.s-radio-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    cursor: pointer;
+    color: var(--s-text);
+    font-size: 0.9rem;
+}
+
+.s-radio {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #4b5563;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: border-color 0.15s;
+}
+
+.s-radio.selected {
+    border-color: #00e676;
+}
+
+.s-radio-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: transparent;
+    transition: background 0.15s;
+}
+
+.s-radio.selected .s-radio-dot {
+    background: #00e676;
+}
+
+/* Buttons */
+.s-btn-outline {
+    width: 100%;
+    padding: 14px;
+    background: transparent;
+    border: 1px solid var(--s-border);
+    border-radius: 10px;
+    color: var(--s-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.s-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.s-btn-danger {
+    width: 100%;
+    padding: 14px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 10px;
+    color: #ef4444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.s-btn-danger:hover {
+    background: rgba(239, 68, 68, 0.18);
+}
+
+/* Footer */
+.s-footer {
+    text-align: center;
+    padding: 32px 0;
+    color: var(--s-text-muted);
+}
+
+.s-footer p {
+    font-size: 0.72rem;
+    margin-top: 8px;
+    opacity: 0.5;
+}
+
+/* ========== Theme Variables ========== */
+:root,
+[data-theme="dark"] {
+    --s-text: #e5e7eb;
+    --s-text-muted: #9ca3af;
+    --s-card-bg: rgba(255, 255, 255, 0.04);
+    --s-input-bg: rgba(255, 255, 255, 0.06);
+    --s-border: rgba(255, 255, 255, 0.1);
+    --s-page-bg: #0f1013;
+}
+
+[data-theme="light"] {
+    --s-text: #1f2937;
+    --s-text-muted: #6b7280;
+    --s-card-bg: #ffffff;
+    --s-input-bg: #f3f4f6;
+    --s-border: #e5e7eb;
+    --s-page-bg: #f9fafb;
+}
+
+/* Global theme overrides */
+[data-theme="light"] .dashboard-container {
+    background: var(--s-page-bg);
+}
+
+[data-theme="light"] .app-header {
+    background: #ffffff !important;
+    border-bottom-color: #e5e7eb !important;
+    color: #1f2937;
+}
+
+[data-theme="light"] .app-header h1 {
+    color: #1f2937;
+}
+
+[data-theme="light"] .bottom-nav {
+    background: #ffffff !important;
+    border-top-color: #e5e7eb !important;
+}
+
+[data-theme="light"] .nav-item {
+    color: #6b7280;
+}
+
+[data-theme="light"] .nav-item.active {
+    color: #00e676;
+}
+
+[data-theme="light"] .safer-home {
+    background: var(--s-page-bg);
+}
+
+[data-theme="light"] .safety-score-card {
+    background: linear-gradient(145deg, rgba(16, 185, 129, 0.06) 0%, rgba(6, 78, 59, 0.08) 100%);
+    border-color: rgba(16, 185, 129, 0.15);
+}
+
+[data-theme="light"] .score-title,
+[data-theme="light"] .section-title,
+[data-theme="light"] .qa-label {
+    color: #1f2937;
+}
+
+[data-theme="light"] .score-updated {
+    color: #6b7280;
+}
+
+[data-theme="light"] .location-status-card {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+[data-theme="light"] .location-status-title,
+[data-theme="light"] .location-city {
+    color: #1f2937;
+}
+
+[data-theme="light"] .qa-card {
+    border-color: #e5e7eb !important;
+}
+
+[data-theme="light"] .qa-card.emergency {
+    background: rgba(239, 68, 68, 0.04);
+}
+
+[data-theme="light"] .qa-card.incident {
+    background: rgba(245, 158, 11, 0.04);
+}
+
+[data-theme="light"] .qa-card.nearby {
+    background: rgba(16, 185, 129, 0.04);
+}
+
+[data-theme="light"] .qa-card.ai-detect {
+    background: rgba(59, 130, 246, 0.04);
+}
+
+[data-theme="light"] .qa-card.chatbot {
+    background: rgba(34, 197, 94, 0.04);
+}
+
+[data-theme="light"] .qa-card.profile-mgr {
+    background: rgba(139, 92, 246, 0.04);
+}
+
+[data-theme="light"] .qa-card.community {
+    background: rgba(245, 158, 11, 0.04);
+}
+
+[data-theme="light"] .qa-card.places {
+    background: rgba(59, 130, 246, 0.04);
+}
+
+[data-theme="light"] .live-stats-section {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+[data-theme="light"] .live-stats-header h3 {
+    color: #1f2937;
+}
+
+[data-theme="light"] .stat-item {
+    border-color: #e5e7eb !important;
+}
+
+[data-theme="light"] .stat-item.tourists {
+    background: rgba(16, 185, 129, 0.04);
+}
+
+[data-theme="light"] .stat-item.alerts-stat {
+    background: rgba(245, 158, 11, 0.04);
+}
+
+[data-theme="light"] .stat-item.response {
+    background: rgba(239, 68, 68, 0.04);
+}
+
+[data-theme="light"] .stat-item.confidence {
+    background: rgba(16, 185, 129, 0.04);
+}
+
+[data-theme="light"] .stat-desc {
+    color: #6b7280;
+}
+
+/* Light theme for other pages */
+[data-theme="light"] .nearby-incidents-page,
+[data-theme="light"] .view-container {
+    background: var(--s-page-bg);
+}
+
+[data-theme="light"] .ni-header h2,
+[data-theme="light"] .ni-type {
+    color: #1f2937;
+}
+
+[data-theme="light"] .ni-card {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}
+
+[data-theme="light"] .ni-filter-btn {
+    background: #f3f4f6;
+    border-color: #e5e7eb;
+    color: #6b7280;
+}
+
+[data-theme="light"] .ni-filter-btn.active {
+    background: rgba(16, 185, 129, 0.08);
+}
+
+/* SOS form light */
+[data-theme="light"] .sos-form {
+    background: #ffffff;
+    border-color: #e5e7eb;
+}

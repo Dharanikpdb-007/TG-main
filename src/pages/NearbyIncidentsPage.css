@@ -1,0 +1,204 @@
+/* NearbyIncidentsPage.css */
+
+.nearby-incidents-page {
+    padding: 0 16px 100px;
+    min-height: 100vh;
+}
+
+/* Header */
+.ni-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+}
+
+.ni-back-btn {
+    background: none;
+    border: none;
+    color: #e5e7eb;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.ni-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #e5e7eb;
+    flex: 1;
+}
+
+.ni-count {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* Filter Tabs */
+.ni-filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.ni-filter-btn {
+    padding: 8px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    color: #9ca3af;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ni-filter-btn.active {
+    background: rgba(16, 185, 129, 0.12);
+    color: #10b981;
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.ni-filter-btn:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.08);
+    color: #e5e7eb;
+}
+
+/* Loading */
+.ni-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 60px 0;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.ni-spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top-color: #10b981;
+    border-radius: 50%;
+    animation: niSpin 0.8s linear infinite;
+}
+
+@keyframes niSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Empty State */
+.ni-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: #6b7280;
+}
+
+.ni-empty h3 {
+    margin: 16px 0 8px;
+    color: #9ca3af;
+    font-size: 1.1rem;
+}
+
+.ni-empty p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* Incident Cards List */
+.ni-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ni-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 16px;
+    transition: background 0.2s ease;
+}
+
+.ni-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.ni-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ni-severity-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border: 1px solid;
+}
+
+.ni-time {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.ni-type {
+    margin: 0 0 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #e5e7eb;
+}
+
+.ni-description {
+    margin: 0 0 12px;
+    font-size: 0.82rem;
+    color: #9ca3af;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.ni-card-footer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.ni-reporter,
+.ni-location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.72rem;
+    color: #6b7280;
+}
+
+.ni-status {
+    margin-left: auto;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}

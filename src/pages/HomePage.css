@@ -1,0 +1,608 @@
+/* HomePage.css – SAFER-inspired dark green theme */
+
+.safer-home {
+    padding: 8px 16px 100px;
+    min-height: 100vh;
+    background: #0f1013;
+}
+
+/* ====== AI Safety Score Card ====== */
+.safety-score-card {
+    background: linear-gradient(145deg, rgba(16, 185, 129, 0.12) 0%, rgba(6, 78, 59, 0.2) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.18);
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 16px;
+}
+
+.score-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.score-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.score-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #e5e7eb;
+    margin: 0;
+}
+
+.score-risk-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.score-updated {
+    font-size: 0.78rem;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+/* Rectangle Score Badge */
+.score-rect-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid;
+    border-radius: 16px;
+    padding: 14px 22px;
+    min-width: 100px;
+    flex-shrink: 0;
+    gap: 6px;
+}
+
+.score-rect-value {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.score-rect-bar-track {
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.score-rect-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease, background 0.5s ease;
+}
+
+.score-rect-max {
+    font-size: 0.7rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Sub Metrics */
+.score-sub-metrics {
+    display: flex;
+    gap: 10px;
+}
+
+.sub-metric {
+    flex: 1;
+    padding: 10px 8px;
+    border-radius: 12px;
+    border: 1px solid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sub-label {
+    font-size: 0.72rem;
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+.sub-value {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+/* ====== Location Status Card ====== */
+.location-status-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 18px 20px;
+    margin-bottom: 24px;
+}
+
+.location-status-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.location-status-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #e5e7eb;
+}
+
+.location-status-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.location-city {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f3f4f6;
+}
+
+.location-zone-info {
+    font-size: 0.8rem;
+    color: #10b981;
+}
+
+.safe-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.safe-badge.safe {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.safe-badge.warning {
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.safe-badge.danger {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* ====== Section Title ====== */
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #e5e7eb;
+    margin: 0 0 14px;
+}
+
+/* ====== Quick Actions Grid ====== */
+.quick-actions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.qa-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.qa-card:active {
+    transform: scale(0.97);
+}
+
+.qa-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.qa-label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #e5e7eb;
+    line-height: 1.3;
+}
+
+/* Emergency Panic – Red Tinted */
+.qa-card.emergency {
+    background: rgba(239, 68, 68, 0.08);
+    border-color: rgba(239, 68, 68, 0.2);
+}
+
+.qa-card.emergency:hover {
+    background: rgba(239, 68, 68, 0.14);
+}
+
+.emergency-icon {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+/* Report Incident – Amber Tinted */
+.qa-card.incident {
+    background: rgba(245, 158, 11, 0.08);
+    border-color: rgba(245, 158, 11, 0.2);
+}
+
+.qa-card.incident:hover {
+    background: rgba(245, 158, 11, 0.14);
+}
+
+.incident-icon {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+}
+
+/* Nearby Incidents – Green Tinted */
+.qa-card.nearby {
+    background: rgba(16, 185, 129, 0.08);
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.qa-card.nearby:hover {
+    background: rgba(16, 185, 129, 0.14);
+}
+
+.nearby-icon {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+}
+
+/* AI Safety Detection – Dark/Blue */
+.qa-card.ai-detect {
+    background: rgba(59, 130, 246, 0.06);
+    border-color: rgba(59, 130, 246, 0.15);
+}
+
+.qa-card.ai-detect:hover {
+    background: rgba(59, 130, 246, 0.12);
+}
+
+.ai-detect-icon {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+}
+
+/* Smart Chatbot – Green */
+.qa-card.chatbot {
+    background: rgba(34, 197, 94, 0.08);
+    border-color: rgba(34, 197, 94, 0.2);
+}
+
+.qa-card.chatbot:hover {
+    background: rgba(34, 197, 94, 0.14);
+}
+
+.chatbot-icon {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+}
+
+/* Profile Manager – Purple */
+.qa-card.profile-mgr {
+    background: rgba(139, 92, 246, 0.06);
+    border-color: rgba(139, 92, 246, 0.15);
+}
+
+.qa-card.profile-mgr:hover {
+    background: rgba(139, 92, 246, 0.12);
+}
+
+.profile-icon {
+    background: rgba(139, 92, 246, 0.2);
+    color: #8b5cf6;
+}
+
+/* Community Interaction – Warm Amber */
+.qa-card.community {
+    background: rgba(245, 158, 11, 0.06);
+    border-color: rgba(245, 158, 11, 0.18);
+}
+
+.qa-card.community:hover {
+    background: rgba(245, 158, 11, 0.12);
+}
+
+.community-icon {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+}
+
+/* Nearby Places – Blue */
+.qa-card.places {
+    background: rgba(59, 130, 246, 0.06);
+    border-color: rgba(59, 130, 246, 0.18);
+}
+
+.qa-card.places:hover {
+    background: rgba(59, 130, 246, 0.12);
+}
+
+.places-icon {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+}
+
+/* ====== Live Statistics Section ====== */
+.live-stats-section {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.live-stats-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.live-stats-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #e5e7eb;
+}
+
+.live-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid transparent;
+}
+
+.stat-icon {
+    flex-shrink: 0;
+}
+
+.stat-number {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f3f4f6;
+}
+
+.stat-desc {
+    font-size: 0.7rem;
+    color: #6b7280;
+    display: block;
+    margin-top: 2px;
+}
+
+.stat-item .stat-number,
+.stat-item .stat-desc {
+    display: block;
+}
+
+/* Wrap number + desc vertically */
+.stat-item {
+    flex-wrap: wrap;
+}
+
+.stat-item .stat-number {
+    flex-basis: calc(100% - 32px);
+}
+
+.stat-item .stat-desc {
+    flex-basis: 100%;
+    margin-top: -2px;
+}
+
+/* Tourists – Green tinted */
+.stat-item.tourists {
+    background: rgba(16, 185, 129, 0.08);
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.stat-item.tourists .stat-icon {
+    color: #10b981;
+}
+
+.stat-item.tourists .stat-number {
+    color: #34d399;
+}
+
+/* Active Alerts – Amber tinted */
+.stat-item.alerts-stat {
+    background: rgba(245, 158, 11, 0.06);
+    border-color: rgba(245, 158, 11, 0.18);
+}
+
+.stat-item.alerts-stat .stat-icon {
+    color: #f59e0b;
+}
+
+.stat-item.alerts-stat .stat-number {
+    color: #fbbf24;
+}
+
+/* Emergency Response – Red/Pink tinted */
+.stat-item.response {
+    background: rgba(239, 68, 68, 0.06);
+    border-color: rgba(239, 68, 68, 0.18);
+}
+
+.stat-item.response .stat-icon {
+    color: #ef4444;
+}
+
+.stat-item.response .stat-number {
+    color: #f87171;
+}
+
+/* AI Confidence – Green tinted */
+.stat-item.confidence {
+    background: rgba(16, 185, 129, 0.06);
+    border-color: rgba(16, 185, 129, 0.18);
+}
+
+.stat-item.confidence .stat-icon {
+    color: #10b981;
+}
+
+.stat-item.confidence .stat-number {
+    color: #34d399;
+}
+
+/* ====== Small SOS FAB ====== */
+.sos-fab-mini {
+    position: fixed;
+    bottom: 86px;
+    right: 18px;
+    z-index: 50;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(239, 68, 68, 0.45);
+    transition: all 0.2s ease;
+    animation: sosPulse 2s ease-in-out infinite;
+}
+
+.sos-fab-mini:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 24px rgba(239, 68, 68, 0.6);
+}
+
+.sos-fab-mini:active {
+    transform: scale(0.95);
+}
+
+@keyframes sosPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 4px 16px rgba(239, 68, 68, 0.45);
+    }
+
+    50% {
+        box-shadow: 0 4px 24px rgba(239, 68, 68, 0.7);
+    }
+}
+
+/* ====== QR Modal ====== */
+.qr-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.2s ease;
+}
+
+.qr-modal-card {
+    background: white;
+    padding: 32px;
+    border-radius: 24px;
+    text-align: center;
+    max-width: 320px;
+    width: 90%;
+    position: relative;
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.qr-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 360px) {
+    .quick-actions-grid {
+        gap: 10px;
+    }
+
+    .qa-card {
+        padding: 14px 12px;
+    }
+
+    .qa-label {
+        font-size: 0.8rem;
+    }
+
+    .live-stats-grid {
+        gap: 8px;
+    }
+}

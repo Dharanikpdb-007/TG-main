@@ -1,0 +1,333 @@
+/* RegisterWizard.css */
+.register-container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #0f1013;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Stepper */
+.stepper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.stepper-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2a2b30;
+    z-index: 1;
+}
+
+.step-item {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.step-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #2a2b30;
+    border: 2px solid #2a2b30;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.step-item.active .step-circle {
+    background-color: #8b5cf6;
+    border-color: #8b5cf6;
+    color: white;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.2);
+}
+
+.step-item.completed .step-circle {
+    background-color: #10b981;
+    border-color: #10b981;
+    color: white;
+}
+
+.step-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.step-item.active .step-label {
+    color: #fff;
+}
+
+/* Form Card */
+.wizard-card {
+    background-color: #18191d;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.step-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.step-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.step-header p {
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+.step-indicator {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Form Groups */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #d1d5db;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 16px;
+    /* Offset from left */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    /* CRITICAL FIX: Add enough left padding to clear the icon */
+    padding: 12px 16px 12px 48px !important;
+    background-color: #0f1013;
+    border: 1px solid #2a2b30;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    /* Ensure padding is contained */
+}
+
+/* Specific class for inputs without icons (like emergency contact name in screenshot, though name usually has icon) */
+.form-input.no-icon {
+    padding-left: 16px !important;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #8b5cf6;
+    background-color: #1a1b20;
+}
+
+/* File Upload */
+.upload-area {
+    border: 2px dashed #2a2b30;
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.upload-area:hover {
+    border-color: #8b5cf6;
+    background-color: rgba(139, 92, 246, 0.05);
+}
+
+.upload-icon {
+    color: #9ca3af;
+    margin-bottom: 8px;
+}
+
+.upload-text {
+    color: #fff;
+    font-weight: 500;
+}
+
+.upload-subtext {
+    color: #6b7280;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+/* Actions */
+.wizard-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-wizard {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-back {
+    background-color: transparent;
+    color: #9ca3af;
+    border: 1px solid #2a2b30;
+}
+
+.btn-back:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-next {
+    background-color: #8b5cf6;
+    color: white;
+    border: none;
+}
+
+.btn-next:hover {
+    background-color: #7c3aed;
+}
+
+.btn-next:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Success Modal */
+.success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.success-modal {
+    background: #18191d;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    border: 1px solid #8b5cf6;
+    animation: popIn 0.3s ease-out;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: #10b981;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+.login-link {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #8b5cf6;
+    text-decoration: none;
+    font-weight: 600;
+}
